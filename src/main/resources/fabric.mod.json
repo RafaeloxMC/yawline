@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "yawline",
+  "version": "${version}",
+  "name": "yawline",
+  "description": "Simple yaw & pitch setter with saving options",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/yawline/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.xvcf.yawline.client.MainClient"
+    ],
+    "main": [
+      "dev.xvcf.yawline.Main"
+    ]
+  },
+  "mixins": [
+    "yawline.mixins.json",
+    {
+      "config": "yawline.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
